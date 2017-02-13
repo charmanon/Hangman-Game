@@ -1,0 +1,73 @@
+body{
+	font-family: 'VT323', monospace;
+	font-size: 16px;
+	text-align: center;
+	background: url("../images/gradient.jpg");
+	background-size: cover;
+}
+
+
+#main-container {
+  width: 100%;
+  height: auto;
+}
+
+
+  .fixed-width
+  {
+  	background: url("../images/battlegrass.png") no-repeat center center fixed;
+    position: absolute;
+    width: 560px;
+    height:550px;
+  }
+
+
+#hangman-space {
+	position:fixed;
+	margin-left:150px;
+	margin-top: 175px;
+	margin-left: 135px;
+	padding:20px 10px 20px 20px;
+	width:200px;
+	height:100px;
+	border: 5px solid red;
+	z-index:1;
+}
+
+#hangman{
+	width:100%;
+}
+
+.text-space {
+	position: fixed;
+	border: 5px red solid;
+	width:300px;
+	height:100px;
+	margin-top: 430px;
+	margin-left: 150px;
+}
+
+.pokemon-gif {
+	position:relative;
+	margin-left:380px;
+	margin-right:10px;
+	margin-top:178px;
+	width:100px;
+	height:100px;
+	border:5px solid green;
+}
+
+.pokemon-gif img{
+	position:absolute;
+	right:0;
+	bottom:0;
+	border:5px solid red;
+}
+
+#gif-size{
+	width:100px;
+	height:100px;
+}
+
+
+
