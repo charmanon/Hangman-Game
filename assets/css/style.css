@@ -15,22 +15,23 @@ body{
 
   .fixed-width
   {
+  	position: fixed;
   	background: url("../images/battlegrass.png") no-repeat center center fixed;
-    position: absolute;
-    width: 560px;
-    height:550px;
+    width: 570px;
+    height:570px;
+
+ /*   border: 5px solid red;*/
   }
 
 
 #hangman-space {
 	position:fixed;
-	margin-left:150px;
-	margin-top: 175px;
-	margin-left: 135px;
+	margin-top: 170px;
+	margin-left: 105px;
 	padding:20px 10px 20px 20px;
 	width:200px;
 	height:100px;
-	border: 5px solid red;
+/*	border: 5px solid red;*/
 	z-index:1;
 }
 
@@ -38,12 +39,12 @@ body{
 	width:100%;
 }
 
-.text-space {
+#text-space {
 	position: fixed;
-	border: 5px red solid;
+/*	border: 5px red solid;*/
 	width:300px;
 	height:100px;
-	margin-top: 430px;
+	margin-top: 0px;
 	margin-left: 150px;
 }
 
@@ -54,14 +55,15 @@ body{
 	margin-top:178px;
 	width:100px;
 	height:100px;
-	border:5px solid green;
+/*	border:5px solid green;*/
+	text-align: center;
 }
 
 .pokemon-gif img{
 	position:absolute;
 	right:0;
 	bottom:0;
-	border:5px solid red;
+/*	border:5px solid red;*/
 }
 
 #gif-size{
@@ -69,5 +71,54 @@ body{
 	height:100px;
 }
 
+#guesses{
+	position:relative;
+	width:100%;
+	height:50%;
+/*	border: 3px solid green;*/
+	word-break: break-all;
+}
 
+#messages{
+	position:relative;
+	width:80px;
+	height:100px;
+	/*border: 3px solid blue;*/
+	margin-left:410px;
+}
+.my-pokemon{
+	position:relative;
+	margin-left:210px;
+	margin-right:10px;
+	margin-top:35px;
+	width:100px;
+	height:100px;
+/*	border:5px solid green;*/
+	text-align: center;
+}
 
+.my-pokemon img{
+	position:absolute;
+	right:0;
+	bottom:0;
+/*	border:5px solid red;*/
+}
+
+#health{
+	position:absolute;
+	width:300px;
+	margin-left:10px;
+	margin-top: 220px;
+	/*border:5px solid red;*/
+}
+#wild-poke{
+	position:absolute;
+	/*border:5px solid red;*/
+	width:120px;
+	height:10px;
+}
+
+progress{
+	background-color: green;
+	margin-top: 4px;
+}

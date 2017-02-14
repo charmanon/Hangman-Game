@@ -9,7 +9,7 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
   <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
   </script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
@@ -19,20 +19,31 @@
 
 <body>
 	<div class="main-container">
+	<audio src="assets/sounds/battle.mp3" autoplay="autoplay"></audio>
 		<div class="fixed-width">
 			<div id="hangman-space">
 			</div>
+			<div id="health">
+			HP:<progress id="wild-poke" value="22" max="100"></progress></div>
 				<div class="pokemon-gif">
-					<img id="poke" src=chosenPoke.img>
+					<img id="poke" src="">
+					<audio id="pokeCry" src="" autoplay="autoplay"></audio>
 				</div>
+			
+			<div class="my-pokemon">
+				<img id="mypoke" src="assets/images/charizardback.gif">
 			</div>		
-			<div class="text-space">
+			<div id="text-space">
 			Type in letters to fill in the space.
 			 
 			 <p> Letters guessed:</p>
+			 <div id="guesses">
 			 </div>
-
+			</div>
+			<div id="messages">
+			</div>
 		</div>
+	</div>
 </body>
 <script src="assets/javascript/helper.js"></script>
 <script src="assets/javascript/game.js"></script>
