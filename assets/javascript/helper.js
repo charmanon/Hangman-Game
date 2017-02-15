@@ -34,7 +34,7 @@ var arcanine = {
 }
 
 var bellossom = {
-	name: "Bellosom",
+	name: "Bellossom",
 	type: grass,
 	img: "assets/images/bellossom.gif",
 	cry: "assets/sounds/bellossom.mp3"

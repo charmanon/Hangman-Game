@@ -1,3 +1,7 @@
+* {
+	border: 5px solid red;
+}
+
 body{
 	font-family: 'VT323', monospace;
 	font-size: 16px;
@@ -7,63 +11,75 @@ body{
 }
 
 
-#main-container {
-  width: 100%;
+.main-container {
+  position: relative;
+  width: 590px;
   height: auto;
+
 }
 
 
   .fixed-width
   {
-  	position: fixed;
-  	background: url("../images/battlegrass.png") no-repeat center center fixed;
-    width: 570px;
-    height:570px;
+	position: relative;
+/*  	background: url("../images/battlegrass.png") no-repeat center center fixed;
+*/  width: 590px;
+    height:590px;
 
- /*   border: 5px solid red;*/
+    border: 5px solid black;
+  }
+
+  #battlegrass {
+  	width: 70%;
+  	z-index: -999;
+  	position: relative;
+  	opacity: 0.9;
+  	bottom: 590px;
   }
 
 
 #hangman-space {
-	position:fixed;
-	margin-top: 170px;
-	margin-left: 105px;
+	position:relative;
+	margin-top: 55px;
+	margin-left: 75px;
 	padding:20px 10px 20px 20px;
 	width:200px;
 	height:100px;
-/*	border: 5px solid red;*/
+	/*border: 5px solid red;*/
 	z-index:1;
 }
 
-#hangman{
+/*#hangman{
 	width:100%;
-}
+}*/
 
 #text-space {
-	position: fixed;
-/*	border: 5px red solid;*/
+	position: relative;
+	/*border: 5px red solid;*/
 	width:300px;
 	height:100px;
-	margin-top: 0px;
-	margin-left: 150px;
+	margin-top: 11px;
+	margin-left: 80px;
 }
 
 .pokemon-gif {
 	position:relative;
-	margin-left:380px;
-	margin-right:10px;
-	margin-top:178px;
+	margin-left:340px;
+	margin-top:-90px;
 	width:100px;
 	height:100px;
-/*	border:5px solid green;*/
+	/*border:5px solid green;*/
 	text-align: center;
 }
 
 .pokemon-gif img{
 	position:absolute;
+	width:auto;
+	height: auto;
 	right:0;
 	bottom:0;
-/*	border:5px solid red;*/
+	/*border:5px solid red;*/
+	/*z-index: 999;*/
 }
 
 #gif-size{
@@ -75,7 +91,7 @@ body{
 	position:relative;
 	width:100%;
 	height:50%;
-/*	border: 3px solid green;*/
+	/*border: 3px solid green;*/
 	word-break: break-all;
 }
 
@@ -84,31 +100,33 @@ body{
 	width:80px;
 	height:100px;
 	/*border: 3px solid blue;*/
-	margin-left:410px;
+	margin-left:390px;
+	margin-top: -100px;
 }
 .my-pokemon{
 	position:relative;
-	margin-left:210px;
-	margin-right:10px;
-	margin-top:35px;
+	margin-left:180px;
+	margin-top:25px;
 	width:100px;
 	height:100px;
-/*	border:5px solid green;*/
+	/*border:5px solid green;*/
 	text-align: center;
 }
 
 .my-pokemon img{
 	position:absolute;
+	width:auto;
+	height: auto;
 	right:0;
 	bottom:0;
-/*	border:5px solid red;*/
+	/*border:5px solid red;*/
 }
 
-#health{
+#enemy-health{
 	position:absolute;
 	width:300px;
-	margin-left:10px;
-	margin-top: 220px;
+	margin-left:-30px;
+	margin-top: -60px;
 	/*border:5px solid red;*/
 }
 #wild-poke{
@@ -116,6 +134,17 @@ body{
 	/*border:5px solid red;*/
 	width:120px;
 	height:10px;
+}
+
+#myhealth{
+	position:absolute;
+	width:300px;
+	margin-left:250px;
+	margin-top: -60px;
+}
+
+#my-health{
+	width:150px;
 }
 
 progress{

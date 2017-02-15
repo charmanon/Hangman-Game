@@ -43,37 +43,50 @@ window.onload = function play() {
     wordChosenMove = chosenMove.replace(/a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, '_');
     document.getElementById("hangman-space").innerHTML = wordChosenPoke + ' used ' + wordChosenMove;
   
-  
+  //changes the HP bar of the pokemon
+    lives = (wordChosenPoke.split("_").length - 1) + (wordChosenMove.split("_").length - 1);
+    lifePerc= lives/lives * 100;
+    $("#enemy-hp").html(lifePerc+ "%");
+    $("#my-hp").html(lifePerc + "%");
+
+
+
     addEventListener("keypress", function(event) {            //Listens for character press
     var guess = String.fromCharCode(event.charCode);          //Stores key pressed  
       if (guesses.indexOf(guess) == -1){                      //If guess is not in the array of guesses 
                 guesses.push(guess);                          //Add to array 
                 sound.src = hitSound;
       } 
-      else{                                                    //Otherwise display error message
+      else {                                                    //Otherwise display error message
       sound.src = error;
       document.getElementById("messages").innerHTML = "You've already guessed that letter!";
       }
+    
     document.getElementById("guesses").innerHTML = guesses;     //Display already used letters
     
+    //replaces the letters in the spaces with the guessed letter
           for(var i = 0; i<guesses.length; i++){
             for (var j=0; j<chosenName.length;j++){
               if(chosenName[j]==guesses[i]){
                 wordChosenPoke = wordChosenPoke.substr(0,j) + guesses[i] + wordChosenPoke.substr(j+1);
+                wordChosenPoke = wordChosenPoke.toUpperCase();
                 document.getElementById("hangman-space").innerHTML = wordChosenPoke + ' used ' + wordChosenMove;
               }              
             }
             for (var k=0;k<chosenMove.length;k++){
               if(chosenMove[k]==guesses[i]){
                 wordChosenMove = wordChosenMove.substr(0,k) + guesses[i] + wordChosenMove.substr(k+1);
+                wordChosenMove = wordChosenMove.toUpperCase();
                 document.getElementById("hangman-space").innerHTML = wordChosenPoke + ' used ' + wordChosenMove;
               }                   
             }
           }
 
+     if (wordChosenMove == chosenMove.toUpperCase()){
+        console.log(wordChosenMove);
+     }
    
   });
-
 
   
   
