@@ -1,13 +1,19 @@
-  var chosenPoke;         // Chosen Pokemon      
-  var chosenMove;         // Chosen Move
-  var word;               //word to guesss
-  var guess;              // Guess
-  var guesses = [ ];      // Stored guesses
-  var caught =0;             //number of pokemon caught
   var image = document.getElementById("poke");
   var sound = document.getElementById("pokeCry");
-  var delayMillis = 1000; //1 second
+  var chosenPoke;               
+  var chosenMove;         
+  var word;               //word to guesss
+  var guess;              // Guess
+  var guesses = [];       // Stored guesses
+  var caught = 0;          //number of pokemon caught
+  var delayMillis = 2000; //1 second
   var hits;               //counts amount of spaces left
+  var myHits = 0;
+  var lifePerc;
+  var myMaxLife = 10;
+  var myHp; 
+  var loses = 0;
+  var maxEnemyHp;
 
    // Get elements
   var showLives = document.getElementById("mylives");
@@ -43,11 +49,16 @@
     document.getElementById("hangman-space").innerHTML = wordChosenPoke + ' used ' + wordChosenMove;
   
   //changes the HP bar of the pokemon
-    lives = (wordChosenPoke.split("_").length - 1) + (wordChosenMove.split("_").length - 1);
-    lifePerc= lives/lives * 100;
+    maxEnemyHp = (wordChosenPoke.split("_").length - 1) + (wordChosenMove.split("_").length - 1);
+    hits = maxEnemyHp;
+    lifePerc= Math.floor((hits/maxEnemyHp) * 100);
     $("#enemy-hp").html(lifePerc+ "%");
-    $("#my-hp").html(lifePerc + "%");
+
+  //user HP bar
+    myHp = Math.floor((myMaxLife-myHits)/myMaxLife * 100);
+    $("#my-hp").html(myHp + "%");
   }
+
     
   newPoke();
   $("#messages").html("<p>Caught: </p>"+ caught);
@@ -58,13 +69,18 @@
       if (guesses.indexOf(guess) == -1){                      //If guess is not in the array of guesses 
                 guesses.push(guess);                          //Add to array 
                 sound.src = hitSound;
-                  $("#messages").html("<p>Caught: </p>"+ caught);
+                $("#messages").html("<p>Caught: </p>"+ caught + "<p>Loses:</p> " + loses);
 
       } 
       else {                                                    //Otherwise display error message
       sound.src = error;
       $("#messages").html("You've already guessed that letter!");
       }
+
+      if (chosenName.indexOf(guess) == -1){                   //If guess is not in the word, hit user
+        myHits++;  
+      }
+      console.log(myHits);
     
     //Display already used letters
     document.getElementById("guesses").innerHTML = guesses;     
@@ -75,21 +91,41 @@
         if(chosenName[j]==guesses[i]){
           wordChosenPoke = wordChosenPoke.substr(0,j) + guesses[i] + wordChosenPoke.substr(j+1);
           wordChosenPoke = wordChosenPoke.toUpperCase();
-          }              
-        }
+            }
+          }             
       for (var k=0;k<chosenMove.length;k++){
         if(chosenMove[k]==guesses[i]){
           wordChosenMove = wordChosenMove.substr(0,k) + guesses[i] + wordChosenMove.substr(k+1);
           wordChosenMove = wordChosenMove.toUpperCase();
-          }                   
-        }
+            }
+          }                 
     }
+
+
 
     //prints the letters in the div 
     $("#hangman-space").html(wordChosenPoke + ' used ' + wordChosenMove);
 
+    //check HP of user and enemy
+
     hits = (wordChosenPoke.split("_").length - 1) + (wordChosenMove.split("_").length - 1);
-    console.log(hits);
+    lifePerc= Math.floor((hits/maxEnemyHp) * 100);
+    myHp = Math.floor((myMaxLife-myHits)/myMaxLife * 100);
+    
+
+    /*if(myHp <= 0){
+      loses++;
+      $("#messages").html("Game over!");
+      guesses = [];
+      $("#guesses").html(guesses);
+      setTimeout(function() {
+      newPoke();
+      }, delayMillis);
+    }*/
+
+    $("#enemy-hp").html(lifePerc+ "%");
+    $("#my-hp").html(myHp + "%");
+
      if (wordChosenMove == chosenMove.toUpperCase()){
           console.log(wordChosenMove);
           caught++;
@@ -98,7 +134,7 @@
           setTimeout(function() {
           newPoke();
           }, delayMillis);
-          $("#messages").html("<p>Caught: </p>"+ caught);
+          $("#messages").html("<p>Caught: </p>"+ caught + "<p>Loses:</p> " + loses);
      }
    
   });
