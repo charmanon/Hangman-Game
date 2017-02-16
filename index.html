@@ -19,7 +19,12 @@
     </script>
   </head>
   <body>
+
     <div class="main-container">
+      <div class="jumbo">
+      		<img src="assets/images/pokeball.png" id="pokeball1"><img src="assets/images/frame.png" id="header-frame"><h1>Pokemon Hangman</h1><h2>Press any key to get started!</h2><img src="assets/images/pokeball.png" id="pokeball2">
+      		</div>
+
       <audio autoplay="autoplay" src="assets/sounds/battle.mp3"></audio>
       <div class="enemy-pokemon">
        		<div id="hangman-space"></div>
@@ -38,20 +43,19 @@
           	<img src="assets/images/mygrass.png" id="my-battlegrass" />
         </div>
         <div id="my-health">
+        	<h2>CHARIZARD</h2>
           	<img src="assets/images/hpbar.png" id="my-hp-bar">
           	<p id="my-hp"></p>
         </div>
-         
+        <div id="hangman-space-main"></div>
         <div id="text-space">
-           <p>Type in letters to fill in the space.
-           </p>
            <p>
             Letters guessed:
            </p>
           <div id="guesses"></div>
         </div>
         <div id="messages"></div>
-      
+      	
       
     </div> <!-- this closes main-container -->
     <script src="assets/javascript/helper.js">

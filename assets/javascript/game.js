@@ -49,7 +49,8 @@
   //replace the words with '_' and prints on the screen
     wordChosenPoke = chosenName.replace(/a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, '_');
     wordChosenMove = chosenMove.replace(/a|b|c|d|e|f|g|h|i|j|k|l|m|n|o|p|q|r|s|t|u|v|w|x|y|z/gi, '_');
-    document.getElementById("hangman-space").innerHTML = wordChosenPoke + ' used ' + wordChosenMove;
+    $("#hangman-space").html(wordChosenPoke);
+    $("#hangman-space-main").html(wordChosenPoke + ' used ' + wordChosenMove);
   
   //changes the HP bar of the pokemon
     maxEnemyHp = (wordChosenPoke.split("_").length - 1) + (wordChosenMove.split("_").length - 1);
@@ -73,15 +74,16 @@
 
   //Call new pokemon  
   newPoke();
-  $("#messages").html("<p>Caught: </p>"+ caught);
+  $("#messages").html("Caught: "+ caught + " Lost: " + loses);
 
-    //Stores key pressed  
+
+  //Runs the logic of hangman everytime a key is pressed 
     addEventListener("keypress", function(event) {            
     var guess = String.fromCharCode(event.charCode);          
       if (guesses.indexOf(guess) == -1){                       
                 guesses.push(guess);                           
                 sound.src = hitSound;
-                $("#messages").html("<p>Caught: </p>"+ caught + "<p>Lost:</p> " + loses);
+                $("#messages").html("Caught: "+ caught + " Lost: " + loses);
 
       } 
       else {                                                    
@@ -90,7 +92,7 @@
       }
 
   //If guess is not in the word, hit user
-      if (chosenName.indexOf(guess) == -1){                   
+      if (chosenName.indexOf(guess) == -1 && chosenMove.indexOf(guess) == -1){                   
         myHits++;  
       }
     
@@ -116,7 +118,8 @@
 
 
     //prints the letters in the div 
-    $("#hangman-space").html(wordChosenPoke + ' used ' + wordChosenMove);
+    $("#hangman-space").html(wordChosenPoke);
+    $("#hangman-space-main").html(wordChosenPoke + ' used ' + wordChosenMove);
 
     //check HP of user and enemy
 
@@ -134,7 +137,7 @@
       loses++;
       myHits=0;
       $("#messages").html("Ran away!");
-      $("#messages").html("<p>Caught: </p>"+ caught + "<p>Lost:</p> " + loses);
+      $("#messages").html("Caught: "+ caught + " Lost: " + loses);
       guesses = [];
       $("#guesses").html(guesses);
       // $("#mypoke").fadeOut( "slow", function() {
@@ -150,12 +153,12 @@
     }
 
 
-     if (wordChosenMove == chosenMove.toUpperCase()){
+     if(wordChosenMove == chosenMove.toUpperCase()){
           myHits = 0;
           caught++;
           guesses = [];
           $("#guesses").html(guesses);
-          $("#messages").html("<p>Caught: </p>"+ caught + "<p>Lost:</p> " + loses);
+          $("#messages").html("Caught: "+ caught + " Lost: " + loses);
           sound.src = chosenPoke["cry"];
           setTimeout(function() {
           newPoke();
