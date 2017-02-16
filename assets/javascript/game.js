@@ -6,14 +6,15 @@
   var guess;              // Guess
   var guesses = [];       // Stored guesses
   var caught = 0;          //number of pokemon caught
-  var delayMillis = 2000; //1 second
+  var delayMillis = 1500; //1 second
   var hits;               //counts amount of spaces left
   var myHits = 0;
   var lifePerc;
-  var myMaxLife = 10;
+  var myMaxLife = 15;
   var myHp; 
   var loses = 0;
   var maxEnemyHp;
+  var width = 100;
 
    // Get elements
   var showLives = document.getElementById("mylives");
@@ -39,7 +40,9 @@
   //change image depending on chosen Pokemon
 
     image.src = chosenPoke["img"];
-
+    $("#poke").fadeIn( "slow", function() {
+    // Animation complete.
+  });
   //add pokemon cry on appearance
     sound.src = chosenPoke["cry"];
 
@@ -59,28 +62,37 @@
     $("#my-hp").html(myHp + "%");
   }
 
-    
+  function move(attack) {
+  var elem = document.getElementById("enemy-bar");   
+  width=width-attack; 
+  elem.style.width = width; 
+  }
+
+  move(20);
+  console.log(width);
+
+  //Call new pokemon  
   newPoke();
   $("#messages").html("<p>Caught: </p>"+ caught);
 
     //Stores key pressed  
-    addEventListener("keypress", function(event) {            //Listens for character press
+    addEventListener("keypress", function(event) {            
     var guess = String.fromCharCode(event.charCode);          
-      if (guesses.indexOf(guess) == -1){                      //If guess is not in the array of guesses 
-                guesses.push(guess);                          //Add to array 
+      if (guesses.indexOf(guess) == -1){                       
+                guesses.push(guess);                           
                 sound.src = hitSound;
-                $("#messages").html("<p>Caught: </p>"+ caught + "<p>Loses:</p> " + loses);
+                $("#messages").html("<p>Caught: </p>"+ caught + "<p>Lost:</p> " + loses);
 
       } 
-      else {                                                    //Otherwise display error message
+      else {                                                    
       sound.src = error;
       $("#messages").html("You've already guessed that letter!");
       }
 
-      if (chosenName.indexOf(guess) == -1){                   //If guess is not in the word, hit user
+  //If guess is not in the word, hit user
+      if (chosenName.indexOf(guess) == -1){                   
         myHits++;  
       }
-      console.log(myHits);
     
     //Display already used letters
     document.getElementById("guesses").innerHTML = guesses;     
@@ -113,33 +125,47 @@
     myHp = Math.floor((myMaxLife-myHits)/myMaxLife * 100);
     
 
-    /*if(myHp <= 0){
-      loses++;
-      $("#messages").html("Game over!");
-      guesses = [];
-      $("#guesses").html(guesses);
-      setTimeout(function() {
-      newPoke();
-      }, delayMillis);
-    }*/
 
     $("#enemy-hp").html(lifePerc+ "%");
     $("#my-hp").html(myHp + "%");
 
+
+    if(myHp <= 0){
+      loses++;
+      myHits=0;
+      $("#messages").html("Ran away!");
+      $("#messages").html("<p>Caught: </p>"+ caught + "<p>Lost:</p> " + loses);
+      guesses = [];
+      $("#guesses").html(guesses);
+      // $("#mypoke").fadeOut( "slow", function() {
+    // Animation complete.
+  // });
+      sound.src = runAway;
+      $("#poke").fadeOut( "slow", function() {
+    // Animation complete.
+  });
+      setTimeout(function() {
+      newPoke();
+      }, delayMillis);
+    }
+
+
      if (wordChosenMove == chosenMove.toUpperCase()){
-          console.log(wordChosenMove);
+          myHits = 0;
           caught++;
           guesses = [];
           $("#guesses").html(guesses);
+          $("#messages").html("<p>Caught: </p>"+ caught + "<p>Lost:</p> " + loses);
+          sound.src = chosenPoke["cry"];
           setTimeout(function() {
           newPoke();
           }, delayMillis);
-          $("#messages").html("<p>Caught: </p>"+ caught + "<p>Loses:</p> " + loses);
+          $("#poke").fadeOut( "slow", function() {
+    // Animation complete.
+  });
      }
    
   });
-
-  
 
 
 }

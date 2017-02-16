@@ -21,32 +21,38 @@
   <body>
     <div class="main-container">
       <audio autoplay="autoplay" src="assets/sounds/battle.mp3"></audio>
-      <div class="fixed-width">
-
-  		<div id="hangman-space"></div>
-        <div id="enemy-health">
-          HP:<p id="enemy-hp"></p><!--<progress id="wild-poke" max="100"></progress>-->
+      <div class="enemy-pokemon">
+       		<div id="hangman-space"></div>
+        	<div id="enemy-health">
+          		<img src="assets/images/hpbar.png" id="hp-bar">
+          		<p id="enemy-hp"></p>
+          		<div id="enemy-bar">
+        	</div>
+        	<div class="pokemon-gif">
+          		<img id="poke" src=""> <audio autoplay="autoplay" id="pokeCry" src=""></audio>
+          		<img src="assets/images/pokegrassenemy.png" id="battlegrass" />
+        	</div>
+       </div>  
+       <div class="my-pokemon">
+          	<img id="mypoke" src="assets/images/charizardback.gif">
+          	<img src="assets/images/mygrass.png" id="my-battlegrass" />
         </div>
-        <div class="pokemon-gif">
-          <img id="poke" src=""> <audio autoplay="autoplay" id="pokeCry" src=""></audio>
+        <div id="my-health">
+          	<img src="assets/images/hpbar.png" id="my-hp-bar">
+          	<p id="my-hp"></p>
         </div>
-        <div class="my-pokemon">
-          <img id="mypoke" src="assets/images/charizardback.gif">
-        </div>
-        	<div id="myhealth">
-            HP:<p id=my-hp></p><!--<progress id="my-health" max="100"></progress>-->
-            </div>
          
         <div id="text-space">
-          Type in letters to fill in the space.
-          <p>
+           <p>Type in letters to fill in the space.
+           </p>
+           <p>
             Letters guessed:
-          </p>
+           </p>
           <div id="guesses"></div>
         </div>
         <div id="messages"></div>
-      </div> <!--closes fixed width-->
-      <img src="assets/images/battlegrass.png" id="battlegrass" /> 
+      
+      
     </div> <!-- this closes main-container -->
     <script src="assets/javascript/helper.js">
     </script> 

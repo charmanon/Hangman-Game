@@ -4,68 +4,40 @@
 
 body{
 	font-family: 'VT323', monospace;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: center;
-	background: url("../images/gradient.jpg");
+	background: url("../images/battlebackground2.png") no-repeat;
 	background-size: cover;
 }
 
 
 .main-container {
   position: relative;
-  width: 590px;
-  height: auto;
-
+  width: 600px;
+  margin-left:200px;
+  margin-top: 100px;
 }
 
 
-  .fixed-width
-  {
+  .enemy-pokemon
+ {
 	position: relative;
-/*  	background: url("../images/battlegrass.png") no-repeat center center fixed;
-*/  width: 590px;
-    height:590px;
-    /*margin-top: -100px;*/
-    border: 1px solid black;
+    /*border: 1px solid black;*/
   }
 
   #battlegrass {
-  	width: 70%;
+  	width: 250%;
   	z-index: -999;
   	position: relative;
-  	opacity: 0.9;
-  	bottom: 590px;
+  	margin-left:-65px;
+  	margin-bottom: 20px;
+  	/*border: 2px solid blue;*/
   }
-
-
-#hangman-space {
-	position:relative;
-	margin-top: 55px;
-	margin-left: 75px;
-	padding:20px 10px 20px 20px;
-	width:200px;
-	height:100px;
-	/*border: 5px solid red;*/
-	z-index:1;
-}
-
-/*#hangman{
-	width:100%;
-}*/
-
-#text-space {
-	position: relative;
-	/*border: 5px red solid;*/
-	width:300px;
-	height:100px;
-	margin-top: 16px;
-	margin-left: 80px;
-}
 
 .pokemon-gif {
 	position:relative;
-	margin-left:340px;
-	margin-top:-90px;
+	margin-left:400px;
+	margin-top:-100px;
 	width:100px;
 	height:100px;
 	/*border:5px solid green;*/
@@ -76,11 +48,65 @@ body{
 	position:absolute;
 	width:auto;
 	height: auto;
+	margin-top: -30px;
 	right:0;
 	bottom:0;
 	/*border:5px solid red;*/
 	/*z-index: 999;*/
 }
+
+#enemy-health{
+	position:absolute;
+	width:300px;
+	margin-left:-30px;
+	margin-top: -60px;
+	/*border:5px solid red;*/
+}
+
+#enemy-hp{
+	margin-top: -54px;
+	margin-left: 20px;
+}
+#hangman-space {
+	position:relative;
+	margin-top: 50px;
+	margin-left: 75px;
+	padding:10px 10px 10px 20px;
+	width:200px;
+	height:100px;
+	border: 2px solid black;
+	z-index:-99;
+	background: rgba(204, 204, 204, 0.7);
+	border-radius: 20px;
+	
+}
+
+#hp-bar{
+	width:65%;
+	position: relative;
+	margin-left: 109px;
+	margin-top: -25px; 
+	z-index: -3;
+	/*border: 2px solid red;*/
+}
+
+#text-space {
+	position: relative;
+	/*border: 5px red solid;*/
+	width:450px;
+	height:100px;
+	margin-top: 80px;
+	margin-left: 75px;
+	background: rgba(204, 204, 204, 0.7);
+	border: 2px solid black;
+	border-radius: 20px;
+	text-align: left;
+}
+
+#text-space p{
+	margin-left:20px;
+}
+
 
 #gif-size{
 	width:100px;
@@ -91,8 +117,10 @@ body{
 	position:relative;
 	width:100%;
 	height:50%;
+	margin-left: 30px;
 	/*border: 3px solid green;*/
 	word-break: break-all;
+	z-index: 3;
 }
 
 #messages{
@@ -103,10 +131,11 @@ body{
 	margin-left:390px;
 	margin-top: -100px;
 }
+
 .my-pokemon{
 	position:relative;
-	margin-left:180px;
-	margin-top:25px;
+	margin-left:80px;
+	margin-top:15px;
 	width:100px;
 	height:100px;
 	/*border:5px solid green;*/
@@ -114,7 +143,7 @@ body{
 }
 
 .my-pokemon img{
-	position:absolute;
+	position:relative;
 	width:auto;
 	height: auto;
 	right:0;
@@ -122,15 +151,17 @@ body{
 	/*border:5px solid red;*/
 }
 
-#enemy-health{
-	position:absolute;
-	width:300px;
-	margin-left:-30px;
-	margin-top: -60px;
-	/*border:5px solid red;*/
+.my-pokemon-gif{
+	position:relative;
+	width:100%;
+	width:200px;
+	height:200px;
+	/*border: 3px dashed green;*/
 }
+
+
 #wild-poke{
-	position:absolute;
+	position:relative;
 	/*border:5px solid red;*/
 	width:120px;
 	height:10px;
@@ -143,11 +174,47 @@ body{
 	margin-top: -60px;
 }
 
-#my-health{
-	width:150px;
+#my-battlegrass{
+	position: relative;
+	width:300px;
+	margin-top: -110px;
+	margin-left: -30px;
+	z-index: -4;
 }
 
-progress{
+#my-health{
+	position:absolute;
+	width:300px;
+	margin-top: -30px;
+	margin-left: 325px;
+	padding:10px 10px 10px 20px;
+	width:200px;
+	height:80px;
+	border: 2px solid black;
+	z-index:-99;
+	background: rgba(204, 204, 204, 0.7);
+	border-radius: 20px;
+}
+
+#my-hp-bar{
+	position: relative;
+	margin-top: -15px;
+	margin-left: -15px;
+	width:120%;
+
+}
+
+#my-hp{
+	position: relative;
+	margin-top: -55px;
+	margin-left:-90px;
+}
+
+#enemy-bar{
+	position:relative;
 	background-color: green;
-	margin-top: 4px;
+	width:100px;
+	height:11px;
+	margin-left: 168px;
+	margin-top: -30px;
 }

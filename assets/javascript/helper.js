@@ -2,6 +2,7 @@ var pokemon;            // Selected pokemon
 var pokeType;           // Selected type
 var hitSound = "assets/sounds/hitsound.wav";
 var error = "assets/sounds/error.mp3";
+var runAway = "assets/sounds/runaway.mp3"
 
 var electric = ["Thunderbolt", "Thunder", "Volt Switch", "Volt Tackle"];
 
