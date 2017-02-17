@@ -19,6 +19,26 @@ var fire = ["Fire Blast", "Ember", "Incinerate", "Flamethrower"];
 var ground = ["Earthquake", "Mud Bomb", "Dig", "Fissure"];
 
 var psychic = ["Psychic", "Confusion", "Future Sight", "Zen Headbutt"];
+
+var bug = ["Bug Bite", "Fury Cutter", "Leech Life", "String Shot"];
+
+var rock = ["Ancient Power", "Rock Blast", "Stone Edge", "Rollout"];
+
+var ice = ["Ice Beam", "Blizzard", "Avalanche", "Aurora Veil"];
+
+var poison = ["Poison Jab", "Cross Poison", "Acid Spray", "Sludge Bomb"];
+
+var ghost = ["Curse", "Destiny Bond", "Shadow Ball", "Nightmare"];
+
+var dark = ["Feint Attack", "Night Slash", "Sucker Punch", "Pursuit"];
+
+var steel = ["Iron Tail", "Bullet Punch", "Metal Claw", "Magnet Bomb"];
+
+var dragon = ["Dragon Claw", "Outrage", "Twister", "Dragon Pulse"];
+
+var fairy = ["Fairy Wind", "Moonblast", "Dazzling Gleam", "Sweet Kiss"];
+//ghost, psychic, dark,
+		//	steel, dragon, fairy, fighting
  
 var squirtle = {
 	name: "Squirtle",
@@ -69,11 +89,18 @@ var groudon = {
 	cry: "assets/sounds/groudon.mp3"
 }
 
-pokemon = [squirtle, arcanine, bellossom, pikachu, wigglytuff, gardevoir, groudon];
+var scyther = {
+	name: "Scyther",
+	type: bug,
+	img: "assets/images/scyther.gif",
+	cry: "assets/sounds/scyther.mp3"
+}
 
-pokeType = [water, fire, grass, electric, normal, psychic, ground];
-		//	bug, ground, rock, ice, poison, ghost, psychic, dark,
-		//	steel, dragon, fairy, fighting];
+pokemon = [squirtle, arcanine, bellossom, pikachu, wigglytuff, gardevoir, groudon, scyther];
+
+pokeType = [water, fire, grass, electric, normal, psychic,
+			bug, ground, rock, ice, poison, ghost, psychic, dark,
+			steel, dragon, fairy, fighting];
 
 
 

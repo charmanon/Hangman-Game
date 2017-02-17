@@ -15,6 +15,8 @@
   var loses = 0;
   var maxEnemyHp;
   var width = 100;
+  var oldPoke = 0;
+  var rng;
 
    // Get elements
   var showLives = document.getElementById("mylives");
@@ -26,8 +28,11 @@
   function newPoke(){
   
   //choose a number
-    var rng = Math.floor(Math.random() * 7);
-
+    rng = Math.floor(Math.random() * pokemon.length);
+    if (rng == oldPoke && rng < pokemon.length){
+        rng ++;
+    }
+    else rng++;
   //choose a pokemon and move depending on rng 
     chosenPoke = pokemon[rng];
     chosenName = chosenPoke.name;
@@ -60,20 +65,19 @@
 
   //user HP bar
     myHp = Math.floor((myMaxLife-myHits)/myMaxLife * 100);
-    $("#my-hp").html(myHp + "%");
+    $("#my-hp-perc").html(myHp + "%");
   }
 
-  function move(attack) {
-  var elem = document.getElementById("enemy-bar");   
-  width=width-attack; 
-  elem.style.width = width; 
+  function attack(enemyHp, myHp) {
+  $("#enemy-bar").css("width", enemyHp);
+  $("#my-bar").css("width", myHp);
   }
-
-  move(20);
-  console.log(width);
 
   //Call new pokemon  
   newPoke();
+
+  oldPoke = rng;
+
   $("#messages").html("Caught: "+ caught + " Lost: " + loses);
 
 
@@ -122,15 +126,14 @@
     $("#hangman-space-main").html(wordChosenPoke + ' used ' + wordChosenMove);
 
     //check HP of user and enemy
-
     hits = (wordChosenPoke.split("_").length - 1) + (wordChosenMove.split("_").length - 1);
     lifePerc= Math.floor((hits/maxEnemyHp) * 100);
     myHp = Math.floor((myMaxLife-myHits)/myMaxLife * 100);
     
 
-
+    attack(lifePerc,myHp);
     $("#enemy-hp").html(lifePerc+ "%");
-    $("#my-hp").html(myHp + "%");
+    $("#my-hp-perc").html(myHp + "%");
 
 
     if(myHp <= 0){
