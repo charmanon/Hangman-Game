@@ -8,6 +8,7 @@ body{
 	text-align: center;
 	background: url("../images/battlebackground2.png") no-repeat;
 	background-size: cover;
+	background-position: fixed;
 }
 
 
@@ -271,9 +272,10 @@ body{
 #my-bar{
 	background-color: green;
 	margin-top: -67px; 
-	margin-left:47px;
+	margin-left:48px;
 	width:101px;
 	height:11px;
+	z-index: -40;
 	/*border: 3px solid red;*/
 }
 
@@ -283,7 +285,8 @@ body{
 	width:100px;
 	height:11px;
 	margin-left: 168px;
-	margin-top: -30px;
+	margin-top: -29px;
+	z-index: -30;
 }
 
 #hangman-space-main{

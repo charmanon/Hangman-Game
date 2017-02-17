@@ -2,7 +2,8 @@ var pokemon;            // Selected pokemon
 var pokeType;           // Selected type
 var hitSound = "assets/sounds/hitsound.wav";
 var error = "assets/sounds/error.mp3";
-var runAway = "assets/sounds/runaway.mp3"
+var runAway = "assets/sounds/runaway.mp3";
+var lowHealth = "assets/sounds/";
 
 var electric = ["Thunderbolt", "Thunder", "Volt Switch", "Volt Tackle"];
 
@@ -37,8 +38,8 @@ var steel = ["Iron Tail", "Bullet Punch", "Metal Claw", "Magnet Bomb"];
 var dragon = ["Dragon Claw", "Outrage", "Twister", "Dragon Pulse"];
 
 var fairy = ["Fairy Wind", "Moonblast", "Dazzling Gleam", "Sweet Kiss"];
-//ghost, psychic, dark,
-		//	steel, dragon, fairy, fighting
+
+var fighting = ["Brick Break", "Cross Chop", "Dynamic Punch", "Jump Kick"];
  
 var squirtle = {
 	name: "Squirtle",
@@ -96,7 +97,58 @@ var scyther = {
 	cry: "assets/sounds/scyther.mp3"
 }
 
-pokemon = [squirtle, arcanine, bellossom, pikachu, wigglytuff, gardevoir, groudon, scyther];
+var pidgeotto = {
+	name: "Pidgeotto",
+	type: flying,
+	img: "assets/images/pidgeotto.gif",
+	cry: "assets/sounds/pidgeotto.mp3"
+}
+
+var steelix = {
+	name: "Steelix",
+	type: steel,
+	img: "assets/images/steelix.gif",
+	cry: "assets/sounds/steelix.mp3"
+}
+
+var clefairy = {
+	name: "Clefairy",
+	type: fairy,
+	img: "assets/images/clefairy.gif",
+	cry: "assets/sounds/clefairy.mp3"
+}
+
+var machamp = {
+	name: "Machamp",
+	type: fighting,
+	img: "assets/images/machamp.gif",
+	cry: "assets/sounds/machamp.mp3"
+}
+
+var glaceon = {
+	name: "Glaceon",
+	type: ice,
+	img: "assets/images/glaceon.gif",
+	cry: "assets/sounds/glaceon.mp3"
+}
+
+var dragonair = {
+	name: "Dragonair",
+	type: dragon,
+	img: "assets/images/dragonair.gif",
+	cry: "assets/sounds/dragonair.mp3"
+}
+
+var blaziken = {
+	name: "Blaziken",
+	type: fire,
+	img: "assets/images/blaziken.gif",
+	cry: "assets/sounds/blaziken.mp3"
+}
+
+
+pokemon = [squirtle, arcanine, bellossom, pikachu, wigglytuff, gardevoir, groudon, scyther,
+			pidgeotto, steelix, clefairy, machamp, glaceon, dragonair, blaziken];
 
 pokeType = [water, fire, grass, electric, normal, psychic,
 			bug, ground, rock, ice, poison, ghost, psychic, dark,
