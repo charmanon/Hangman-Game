@@ -81,10 +81,25 @@
         sound.src = error;
         $("#messages").html("You've already guessed that letter!");
       }
+
       //If guess is not in the word, hit user
       if (chosenName.indexOf(guess) == -1 && chosenMove.indexOf(guess) == -1) {
         myHits++;
+        $("#hit-me").css("opacity", "0.15");
+        setTimeout(function() {
+        $("#hit-me").css("opacity", "0");
+        }, 140);
       }
+
+
+      //If guess is in the word, hit enemy
+      if (chosenName.indexOf(guess) > -1 || chosenMove.indexOf(guess) > -1) {
+        $("#hit").css("opacity", "0.15");
+        setTimeout(function() {
+        $("#hit").css("opacity", "0");
+        }, 140);
+      }
+
       //Display already used letters
       document.getElementById("guesses").innerHTML = guesses;
       //replaces the letters in the spaces with the guessed letter
