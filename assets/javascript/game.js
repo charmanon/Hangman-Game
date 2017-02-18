@@ -1,5 +1,6 @@
   var image = document.getElementById("poke");
   var sound = document.getElementById("pokeCry");
+  var backgroundSound = document.getElementById("back-noise");
   var chosenPoke;
   var chosenMove;
   var word; //word to guesss
@@ -30,7 +31,7 @@
       //choose a pokemon and move depending on rng 
       chosenPoke = pokemon[rng];
       chosenName = chosenPoke.name;
-      chosenMove = chosenPoke.type[Math.floor(Math.random() * 4)];
+      chosenMove = chosenPoke.type[Math.floor(Math.random() * 6)];
       //make the words lower case for replacement  
       chosenName = chosenName.toLowerCase();
       chosenMove = chosenMove.toLowerCase();
@@ -54,6 +55,9 @@
       //user HP bar
       myHp = Math.floor((myMaxLife - myHits) / myMaxLife * 100);
       $("#my-hp-perc").html(myHp + "%");
+      $("#my-bar").css("background-color", "green");
+      $("#enemy-bar").css("background-color", "green");
+      backgroundSound.src = "";
     }
 
     function attack(enemyHp, myHp) {
@@ -61,9 +65,9 @@
       $("#my-bar").css("width", myHp);
     }
     
-    //Call new pokemon  
-    newPoke();
+    //Call new pokemon 
     oldPoke = rng;
+    newPoke();
     $("#messages").html("Caught: " + caught + " Lost: " + loses);
     
     //Runs the logic of hangman everytime a key is pressed 
@@ -141,6 +145,14 @@
           newPoke();
         }, delayMillis);
         $("#poke").fadeOut("slow", function() {});
+      }
+
+      if (myHp < 35 && myHp > 25){
+        $("#my-bar").css("background-color", "orange");
+        backgroundSound.src = lowHealth;
+      }
+      if (lifePerc < 35 && lifePerc > 25){
+        $("#enemy-bar").css("background-color", "orange");
       }
     });
   }

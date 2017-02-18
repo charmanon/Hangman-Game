@@ -3,43 +3,43 @@ var pokeType;           // Selected type
 var hitSound = "assets/sounds/hitsound.wav";
 var error = "assets/sounds/error.mp3";
 var runAway = "assets/sounds/runaway.mp3";
-var lowHealth = "assets/sounds/";
+var lowHealth = "assets/sounds/lowhealth.mp3";
 
-var electric = ["Thunderbolt", "Thunder", "Volt Switch", "Volt Tackle"];
+var electric = ["Thunderbolt", "Thunder", "Volt Switch", "Volt Tackle", "Electro Ball", "Spark"];
 
-var water = ["Surf", "Hydro Pump", "Water Gun", "Bubblebeam"];
+var water = ["Surf", "Hydro Pump", "Water Gun", "Bubblebeam", "Aqua Jet", "Whirlpool"];
 
-var grass = ["Solar Beam", "Frenzy Plant", "Giga Drain", "Razor Leaf"];
+var grass = ["Solar Beam", "Frenzy Plant", "Giga Drain", "Razor Leaf", "Grass Knot", "Bullet Seed"];
 
-var normal = ["Quick Attack", "Hyper Beam", "Body Slam", "Tackle"];
+var normal = ["Quick Attack", "Hyper Beam", "Body Slam", "Tackle", "Headbutt", "Hidden Power"];
 
-var flying = ["Aerial Ace", "Air Slash", "Drill Peck", "Peck"];
+var flying = ["Aerial Ace", "Air Slash", "Drill Peck", "Sky Attack", "Acrobatics", "Fly"];
 
-var fire = ["Fire Blast", "Ember", "Incinerate", "Flamethrower"];
+var fire = ["Fire Blast", "Ember", "Incinerate", "Flamethrower", "Blaze Kick", "Eruption"];
 
-var ground = ["Earthquake", "Mud Bomb", "Dig", "Fissure"];
+var ground = ["Earthquake", "Mud Bomb", "Dig", "Fissure", "Bulldoze", "Magnitude"];
 
-var psychic = ["Psychic", "Confusion", "Future Sight", "Zen Headbutt"];
+var psychic = ["Psychic", "Confusion", "Future Sight", "Zen Headbutt", "Extrasensory", "Mirror Coat"];
 
-var bug = ["Bug Bite", "Fury Cutter", "Leech Life", "String Shot"];
+var bug = ["Bug Bite", "Fury Cutter", "Leech Life", "Bug Buzz", "Silver Wind", "X Scissor"];
 
-var rock = ["Ancient Power", "Rock Blast", "Stone Edge", "Rollout"];
+var rock = ["Ancient Power", "Rock Blast", "Stone Edge", "Rollout", "Rock Slide", "Sandstorm"];
 
-var ice = ["Ice Beam", "Blizzard", "Avalanche", "Aurora Veil"];
+var ice = ["Ice Beam", "Blizzard", "Avalanche", "Aurora Veil", "Hail", "Icy Wind"];
 
-var poison = ["Poison Jab", "Cross Poison", "Acid Spray", "Sludge Bomb"];
+var poison = ["Poison Jab", "Cross Poison", "Acid Spray", "Sludge Bomb", "Gunk Shot", "Toxic"];
 
-var ghost = ["Curse", "Destiny Bond", "Shadow Ball", "Nightmare"];
+var ghost = ["Curse", "Destiny Bond", "Shadow Ball", "Nightmare", "Lick", "Astonish"];
 
-var dark = ["Feint Attack", "Night Slash", "Sucker Punch", "Pursuit"];
+var dark = ["Feint Attack", "Night Slash", "Sucker Punch", "Pursuit", "Crunch", "Dark Pulse"];
 
-var steel = ["Iron Tail", "Bullet Punch", "Metal Claw", "Magnet Bomb"];
+var steel = ["Iron Tail", "Bullet Punch", "Metal Claw", "Magnet Bomb", "Iron Head", "Flash Cannon"];
 
-var dragon = ["Dragon Claw", "Outrage", "Twister", "Dragon Pulse"];
+var dragon = ["Dragon Claw", "Outrage", "Twister", "Dragon Pulse", "Draco Meteor", "Dragon Breath"];
 
-var fairy = ["Fairy Wind", "Moonblast", "Dazzling Gleam", "Sweet Kiss"];
+var fairy = ["Fairy Wind", "Moonblast", "Dazzling Gleam", "Sweet Kiss", "Disarming Voice", "Draining Kiss"];
 
-var fighting = ["Brick Break", "Cross Chop", "Dynamic Punch", "Jump Kick"];
+var fighting = ["Brick Break", "Cross Chop", "Dynamic Punch", "Jump Kick", "Focus Blast", "Close Combat"];
  
 var squirtle = {
 	name: "Squirtle",
@@ -146,9 +146,58 @@ var blaziken = {
 	cry: "assets/sounds/blaziken.mp3"
 }
 
+var weezing = {
+	name: "Weezing",
+	type: poison,
+	img: "assets/images/weezing.gif",
+	cry: "assets/sounds/weezing.mp3"
+}
+
+var umbreon = {
+	name: "Umbreon",
+	type: dark,
+	img: "assets/images/umbreon.gif",
+	cry: "assets/sounds/umbreon.mp3"
+}
+
+var gengar = {
+	name: "Gengar",
+	type: ghost,
+	img: "assets/images/gengar.gif",
+	cry: "assets/sounds/gengar.mp3"
+}
+
+var espeon = {
+	name: "Espeon",
+	type: psychic,
+	img: "assets/images/espeon.gif",
+	cry: "assets/sounds/espeon.mp3"
+}
+
+var kyogre = {
+	name: "Kyogre",
+	type: water,
+	img: "assets/images/kyogre.gif",
+	cry: "assets/sounds/kyogre.mp3"
+}
+
+var lugia = {
+	name: "Lugia",
+	type: psychic,
+	img: "assets/images/lugia.gif",
+	cry: "assets/sounds/lugia.mp3"
+}
+
+var onix = {
+	name: "Onix",
+	type: rock,
+	img: "assets/images/onix.gif",
+	cry: "assets/sounds/onix.mp3"
+}
 
 pokemon = [squirtle, arcanine, bellossom, pikachu, wigglytuff, gardevoir, groudon, scyther,
-			pidgeotto, steelix, clefairy, machamp, glaceon, dragonair, blaziken];
+			pidgeotto, steelix, clefairy, machamp, glaceon, dragonair, blaziken, weezing,
+			umbreon, gengar, espeon, lugia, onix];
 
 pokeType = [water, fire, grass, electric, normal, psychic,
 			bug, ground, rock, ice, poison, ghost, psychic, dark,

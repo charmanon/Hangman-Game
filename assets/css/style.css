@@ -2,13 +2,19 @@
 	/*border: 5px solid red;*/
 }
 
+
 body{
 	font-family: 'VT323', monospace;
 	font-size: 18px;
 	text-align: center;
-	background: url("../images/battlebackground2.png") no-repeat;
-	background-size: cover;
-	background-position: fixed;
+	background: url("../images/battlebackground2.png") no-repeat center center; 
+	background-size: 130% 180%;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently*/
 }
 
 
@@ -250,6 +256,7 @@ body{
 	border-radius: 20px;
 	/*border: 3px solid green;*/
 }
+
 #my-health h2{
 	margin-bottom: -20px;
 }
@@ -302,3 +309,4 @@ body{
 	background: rgba(204, 204, 204, 0.7);
 	border-radius: 20px;
 }
+
