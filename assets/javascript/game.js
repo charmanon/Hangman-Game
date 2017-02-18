@@ -133,7 +133,7 @@
       }
       
       //Once user solves the hangman, encounter a new pokemon
-      if (wordChosenMove == chosenMove.toUpperCase()) {
+      if (wordChosenMove == chosenMove.toUpperCase() && wordChosenPoke == chosenName.toUpperCase()) {
         myHits = 0;
         caught++;
         guesses = [];
