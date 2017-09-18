@@ -4,6 +4,7 @@ var hitSound = "assets/sounds/hitsound.wav";
 var error = "assets/sounds/error.mp3";
 var runAway = "assets/sounds/runaway.mp3";
 var lowHealth = "assets/sounds/lowhealth.mp3";
+var pokeball = "assets/images/pokeball.png";
 
 var electric = ["Thunderbolt", "Thunder", "Volt Switch", "Volt Tackle", "Electro Ball", "Spark"];
 

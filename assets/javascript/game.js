@@ -18,8 +18,14 @@
   var width = 100;
   var oldPoke = 0;
   var rng;
-  
+  var pokedex = [];
+
   window.onload = function play() {
+
+    var myAudio = document.getElementById("battlenoise");  
+    myAudio.volume = 0.2; 
+    backgroundSound.volume = 1.0;
+    sound.volume = 0.4;
     
     //Create a new pokemon
     function newPoke() {
@@ -28,6 +34,12 @@
       if (rng == oldPoke && rng < pokemon.length - 1) {
         rng++;
       }
+      // pokedex.push(rng);
+      
+      // if (pokedex.indexOf(rng)> -1){
+      //   $("#hangman-space").append(pokeball);
+      // }
+
       //choose a pokemon and move depending on rng 
       chosenPoke = pokemon[rng];
       chosenName = chosenPoke.name;

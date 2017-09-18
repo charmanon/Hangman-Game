@@ -1,14 +1,14 @@
-#HW - Hangman Game
+# HW - Hangman Game
 
-##Live Link 
+## Live Link
 
-https://sharloteean.github.io/Hangman-Game/
+[Click here to play the game. Volume warning!](https://sharloteean.github.io/Hangman-Game/)
 
-##Description on how to use the app
+## Description on how to use the app
 
-Press any key to guess the hangman words. When you complete the hangman, you catch the pokemon. If you lose all your HP, the enemy runs away. 
+Press any key to guess the hangman words. When you complete the hangman, you catch the pokemon. If you lose all your HP, the enemy runs away.
 
-##Requirements
+## Requirements
 
 * Use key events to listen for the letters that your players will type.
 
@@ -29,14 +29,14 @@ Press any key to guess the hangman words. When you complete the hangman, you cat
 ```
 * After the user wins/loses the game should automatically choose another word and make the user play it.
 
-##Technologies Used
-* CSS 
+## Technologies Used
+* CSS
 * Javascript
 * Jquery for Dom Manipulation
 
 Pokemon sprites courtesy of http://www.pokestadium.com/tools/sprites
 
-The event listener stores the key press and runs the javasctipt logic that changes the spaces to the letter pressed if the character appears in the hangman. 
+The event listener stores the key press and runs the javasctipt logic that changes the spaces to the letter pressed if the character appears in the hangman.
 
 ```
 addEventListener("keypress", function(event) {
@@ -74,7 +74,7 @@ addEventListener("keypress", function(event) {
       }
 ```
 
-A new pokemon is created in Javascript and replaces the image with a new pokemon and a new hangman puzzle. 
+A new pokemon is created in Javascript and replaces the image with a new pokemon and a new hangman puzzle.
 
 ```
 function newPoke() {
@@ -84,7 +84,7 @@ function newPoke() {
         rng++;
       }
 
-      //choose a pokemon and move depending on rng 
+      //choose a pokemon and move depending on rng
       chosenPoke = pokemon[rng];
       chosenName = chosenPoke.name;
       chosenMove = chosenPoke.type[Math.floor(Math.random() * 4)];
