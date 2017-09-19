@@ -1,150 +1,142 @@
 * {
 	/*border: 5px solid red;*/
 }
-
-
-body{
+body {
+	display: flex;
+	justify-content: center;
 	font-family: 'VT323', monospace;
 	font-size: 18px;
 	text-align: center;
-	background: url("../images/battlebackground2.png") no-repeat center center; 
+	background: url('../images/battlebackground2.png') no-repeat center center;
 	background-size: 130% 180%;
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently*/
+	-webkit-touch-callout: none; /* iOS Safari */
+	-webkit-user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently*/
 }
-
 
 .main-container {
-  position: relative;
-  width: 600px;
-  margin-left:200px;
-  margin-top: 0px;
+	position: relative;
+	width: 600px;
 }
 
-#header-frame{
-	position:relative;
+#header-frame {
+	position: relative;
 	z-index: 2;
 	margin-left: -30px;
-	width:600px;
-	height:100px;
+	width: 600px;
+	height: 100px;
 }
 
-#pokeball1{
-	position:absolute;
-	width:20px;
-	height:auto;
-	margin-left:55px;
+#pokeball1 {
+	position: absolute;
+	width: 20px;
+	height: auto;
+	margin-left: 55px;
 	margin-top: 33px;
 	z-index: 2;
 }
 
-#pokeball2{
-	position:absolute;
-	width:20px;
-	height:auto;
-	margin-left:205px;
+#pokeball2 {
+	position: absolute;
+	width: 20px;
+	height: auto;
+	margin-left: 205px;
 	margin-top: -45px;
 	z-index: 2;
 }
 
-.jumbo{
-	position:relative;
-	background-color:rgba(204, 204, 204, 0.7);
-	padding: 0px 20px 20px 0px; 
-	width:540px;
+.jumbo {
+	position: relative;
+	background-color: rgba(204, 204, 204, 0.7);
+	padding: 0px 20px 20px 0px;
+	width: 540px;
 	margin-left: 35px;
 	margin-bottom: 30px;
 }
 
-.jumbo h1{
+.jumbo h1 {
 	position: relative;
 	margin-top: -90px;
 	margin-left: 30px;
 	font-size: 50px;
 }
 
-.jumbo h2{
+.jumbo h2 {
 	font-size: 15px;
-
 }
 
-
-.jumbo img{
-	width:500px;
+.jumbo img {
+	width: 500px;
 }
 
-
-  .enemy-pokemon
- {
+.enemy-pokemon {
 	position: relative;
-    /*border: 1px solid black;*/
-  }
+	/*border: 1px solid black;*/
+}
 
-  #battlegrass {
-  	width: 250%;
-  	z-index: -999;
-  	position: relative;
-  	margin-left:-65px;
-  	margin-bottom: 20px;
-  	/*border: 2px solid blue;*/
-  }
+#battlegrass {
+	width: 250%;
+	z-index: -999;
+	position: relative;
+	margin-left: -65px;
+	margin-bottom: 20px;
+	/*border: 2px solid blue;*/
+}
 
 .pokemon-gif {
-	position:relative;
-	margin-left:400px;
-	margin-top:-65px;
-	width:100px;
-	height:100px;
+	position: relative;
+	margin-left: 400px;
+	margin-top: -65px;
+	width: 100px;
+	height: 100px;
 	/*border:5px solid green;*/
 	text-align: center;
 }
 
-.pokemon-gif img{
-	position:absolute;
-	width:auto;
+.pokemon-gif img {
+	position: absolute;
+	width: auto;
 	height: auto;
 	margin-top: -30px;
-	right:0;
-	bottom:0;
+	right: 0;
+	bottom: 0;
 	/*border:5px solid red;*/
 	/*z-index: 999;*/
 }
 
-#enemy-health{
-	position:absolute;
-	width:300px;
-	margin-left:-30px;
+#enemy-health {
+	position: absolute;
+	width: 300px;
+	margin-left: -30px;
 	margin-top: -60px;
 	/*border:5px solid red;*/
 }
 
-#enemy-hp{
+#enemy-hp {
 	margin-top: -54px;
 	margin-left: 20px;
 }
 #hangman-space {
-	position:relative;
+	position: relative;
 	margin-top: 50px;
 	margin-left: 75px;
-	padding:10px 10px 10px 20px;
-	width:200px;
-	height:80px;
+	padding: 10px 10px 10px 20px;
+	width: 200px;
+	height: 80px;
 	border: 2px solid black;
-	z-index:-99;
+	z-index: -99;
 	background: rgba(204, 204, 204, 0.7);
 	border-radius: 20px;
-	
 }
 
-#hp-bar{
-	width:65%;
+#hp-bar {
+	width: 65%;
 	position: relative;
 	margin-left: 109px;
-	margin-top: -25px; 
+	margin-top: -25px;
 	z-index: -3;
 	/*border: 2px solid red;*/
 }
@@ -152,8 +144,8 @@ body{
 #text-space {
 	position: relative;
 	/*border: 5px red solid;*/
-	width:450px;
-	height:50px;
+	width: 450px;
+	height: 50px;
 	margin-top: 20px;
 	margin-left: 75px;
 	background: rgba(204, 204, 204, 0.7);
@@ -162,157 +154,155 @@ body{
 	text-align: left;
 }
 
-#text-space p{
-	margin-left:20px;
+#text-space p {
+	margin-left: 20px;
 }
 
-
-#gif-size{
-	width:100px;
-	height:100px;
+#gif-size {
+	width: 100px;
+	height: 100px;
 }
 
-#guesses{
-	position:relative;
-	width:100%;
-	height:50%;
+#guesses {
+	position: relative;
+	width: 100%;
+	height: 50%;
 	margin-left: 16px;
 	/*border: 3px solid green;*/
 	word-break: break-all;
 	z-index: 3;
 }
 
-#messages{
-	position:relative;
-	width:500px;
-	height:50px;
+#messages {
+	position: relative;
+	width: 500px;
+	height: 50px;
 	/*border: 3px solid blue;*/
-	margin-left:40px;
+	margin-left: 40px;
 	margin-top: -100px;
 	z-index: 90;
 }
 
-.my-pokemon{
-	position:relative;
-	margin-left:80px;
-	margin-top:15px;
-	width:100px;
-	height:100px;
+.my-pokemon {
+	position: relative;
+	margin-left: 80px;
+	margin-top: 15px;
+	width: 100px;
+	height: 100px;
 	/*border:5px solid green;*/
 	text-align: center;
 }
 
-.my-pokemon img{
-	position:relative;
-	width:auto;
+.my-pokemon img {
+	position: relative;
+	width: auto;
 	height: auto;
-	right:0;
-	bottom:0;
+	right: 0;
+	bottom: 0;
 	/*border:5px solid red;*/
 }
 
-.my-pokemon-gif{
-	position:relative;
-	width:100%;
-	width:200px;
-	height:200px;
+.my-pokemon-gif {
+	position: relative;
+	width: 100%;
+	width: 200px;
+	height: 200px;
 	/*border: 3px dashed green;*/
 }
 
-
-#wild-poke{
-	position:relative;
+#wild-poke {
+	position: relative;
 	/*border:5px solid red;*/
-	width:120px;
-	height:10px;
+	width: 120px;
+	height: 10px;
 }
 
-#myhealth{
-	position:absolute;
-	width:300px;
-	margin-left:250px;
+#myhealth {
+	position: absolute;
+	width: 300px;
+	margin-left: 250px;
 	margin-top: -60px;
 }
 
-#my-battlegrass{
+#my-battlegrass {
 	position: relative;
-	width:300px;
+	width: 300px;
 	margin-top: -110px;
 	margin-left: -30px;
 	z-index: -4;
 }
 
-#my-health{
-	position:absolute;
-	width:300px;
+#my-health {
+	position: absolute;
+	width: 300px;
 	margin-top: -30px;
 	margin-left: 325px;
-	padding:10px 10px 10px 20px;
-	width:200px;
-	height:80px;
+	padding: 10px 10px 10px 20px;
+	width: 200px;
+	height: 80px;
 	border: 2px solid black;
-	z-index:-99;
+	z-index: -99;
 	background: rgba(204, 204, 204, 0.7);
 	border-radius: 20px;
 	/*border: 3px solid green;*/
 }
 
-#my-health h2{
+#my-health h2 {
 	margin-bottom: -20px;
 }
 
-#my-hp-bar{
+#my-hp-bar {
 	position: relative;
 	margin-top: -15px;
 	margin-left: -15px;
-	width:120%;
+	width: 120%;
 }
 
-#my-hp-perc{
+#my-hp-perc {
 	position: relative;
 	margin-top: 0px;
-	margin-left:-92px;
-	z-index:999;
+	margin-left: -92px;
+	z-index: 999;
 	/*border: 3px solid blue;*/
 }
 
-#my-bar{
+#my-bar {
 	background-color: green;
-	margin-top: -67px; 
-	margin-left:48px;
-	width:101px;
-	height:11px;
+	margin-top: -67px;
+	margin-left: 48px;
+	width: 101px;
+	height: 11px;
 	z-index: -40;
 	/*border: 3px solid red;*/
 }
 
-#enemy-bar{
-	position:relative;
+#enemy-bar {
+	position: relative;
 	background-color: green;
-	width:100px;
-	height:11px;
+	width: 100px;
+	height: 11px;
 	margin-left: 168px;
 	margin-top: -29px;
 	z-index: -30;
 }
 
-#hangman-space-main{
-	position:relative;
+#hangman-space-main {
+	position: relative;
 	margin-top: 80px;
 	margin-left: 75px;
-	padding:10px 10px 10px 20px;
-	width:450px;
-	height:70px;
+	padding: 10px 10px 10px 20px;
+	width: 450px;
+	height: 70px;
 	border: 2px solid black;
-	z-index:9;
+	z-index: 9;
 	font-size: 30px;
 	background: rgba(204, 204, 204, 0.7);
 	border-radius: 20px;
 }
 
-#hit{
+#hit {
 	position: relative;
-	width:150px;
+	width: 150px;
 	margin-top: -530px;
 	margin-left: 380px;
 	z-index: 99;
@@ -320,12 +310,177 @@ body{
 	opacity: 0;
 }
 
-#hit-me{
+#hit-me {
 	position: relative;
-	width:150px;
+	width: 150px;
 	margin-top: -100px;
 	margin-left: -210px;
 	z-index: 99;
 	/*border: 3px solid red;*/
 	opacity: 0;
+}
+
+#buttons {
+	display: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.main-container {
+		position: relative;
+		width: 380px;
+	}
+
+	.jumbo {
+		position: relative;
+		background-color: rgba(204, 204, 204, 0.7);
+		padding: 0px 12px 28px 5px;
+		width: 340px;
+		margin-left: 28px;
+		margin-bottom: 30px;
+	}
+
+	.jumbo h1 {
+		position: relative;
+		margin-top: -90px;
+		margin-left: 10px;
+		font-size: 40px;
+	}
+
+	.jumbo h2 {
+		font-size: 12px;
+	}
+
+	#pokeball1 {
+		position: absolute;
+		width: 20px;
+		height: auto;
+		margin-left: 18px;
+		margin-top: 28px;
+		z-index: 2;
+	}
+
+	#pokeball2 {
+		position: absolute;
+		width: 20px;
+		height: auto;
+		margin-left: 141px;
+		margin-top: -38px;
+		z-index: 2;
+	}
+
+	.enemy-pokemon {
+		margin-left: -60px;
+	}
+
+	#header-frame {
+		width: 390px;
+	}
+
+	.pokemon-gif {
+		margin-left: 340px;
+		display: flex;
+	}
+
+	.pokemon-gif img {
+		justify-content: center;
+	}
+
+	#battlegrass {
+		justify-content: center;
+		margin-bottom: -112px;
+	}
+
+	.my-pokemon {
+		margin-left: 23px;
+	}
+
+	#my-health {
+		margin-left: 250px;
+	}
+
+	#hangman-space-main {
+		position: relative;
+		margin-top: 80px;
+		margin-left: 85px;
+		padding: 5px 5px 0px 10px;
+		width: 333px;
+		height: 70px;
+		border: 2px solid black;
+		z-index: 9;
+		font-size: 25px;
+		background: rgba(204, 204, 204, 0.7);
+		border-radius: 20px;
+	}
+
+	#text-space {
+		width: 350px;
+		height: 220px;
+		margin-top: 5px;
+	}
+
+	#text-space p {
+		display: none;
+	}
+
+	#messages {
+		height: 50px;
+		width: 400px;
+		margin-top: -250px;
+	}
+
+	#guesses {
+		display: none;
+	}
+
+	#buttons {
+		display: inline;
+		position: relative;
+		/*border: 5px red solid;*/
+		height: 60px;
+		margin-top: 20px;
+		margin-left: 75px;
+		background: rgba(204, 204, 204, 0.7);
+		border-radius: 10px;
+		text-align: left;
+	}
+
+	#alphabet {
+		justify-content: center;
+		margin: 7px 7px 10px 20px;
+		padding: 0;
+		max-width: 900px;
+	}
+
+	#alphabet li {
+		text-align: center;
+		align-items: center;
+		float: left;
+		margin: 0 10px 10px 0;
+		list-style: none;
+		width: 35px;
+		height: 35px;
+		background: #fff;
+		color: #2f8eb1;
+		cursor: pointer;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		border-radius: 5px;
+		-khtml-border-radius: 5px;
+		border: solid 1px #fff;
+	}
+	#alphabet li:hover {
+		background: #4fbdf4;
+		border: solid 1px #fff;
+		color: #fff;
+	}
+
+	.clicked {
+		background: #4fbdf4 !important;
+		border: solid 1px #fff !important;
+		color: #fff !important;
+	}
+
+	.letter {
+		font-size: 30px;
+	}
 }

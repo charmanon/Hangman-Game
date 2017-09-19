@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>
-      Pokemon Hangman
-    </title>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel=
-    "stylesheet">
-    <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
-    <link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
-    </script>
-  </head>
-  <body>
 
-    <div class="main-container">
-      <div class="jumbo">
-      		<img src="assets/images/pokeball.png" id="pokeball1"><img src="assets/images/frame.png" id="header-frame"><h1>Pokemon Hangman</h1><h2>Press any key to get started!</h2><img src="assets/images/pokeball.png" id="pokeball2">
-      		</div>
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Pokemon Hangman
+  </title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
+  <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+  <link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+  </script>
+</head>
 
-      <audio loop id="battlenoise" autoplay="autoplay" src="assets/sounds/battle.mp3"></audio>
-      <audio loop id="back-noise" autoplay="autoplay" src=""></audio>
+<body>
 
-      <div class="enemy-pokemon">
-       		<div id="hangman-space"></div>
-        	<div id="enemy-health">
-          		<img src="assets/images/hpbar.png" id="hp-bar">
-          		<p id="enemy-hp"></p>
-          		<div id="enemy-bar">
-        	</div>
-        	<div class="pokemon-gif">
-          		<img id="poke" src=""> <audio autoplay="autoplay" id="pokeCry" src=""></audio>
-          		<img src="assets/images/pokegrassenemy.png" id="battlegrass" />
-        	</div>              
-          <img src="assets/images/hit.png" id="hit"/>
-       </div>  
-       <div class="my-pokemon">
-          	<img id="mypoke" src="assets/images/charizardback.gif">
-          	<img src="assets/images/mygrass.png" id="my-battlegrass" />
+  <div class="main-container">
+    <div class="jumbo">
+      <img src="assets/images/pokeball.png" id="pokeball1"><img src="assets/images/frame.png" id="header-frame">
+      <h1>Pokemon Hangman</h1>
+      <h2>Guess the pokemon's name and move! Press any key to get started!</h2><img src="assets/images/pokeball.png" id="pokeball2">
+    </div>
+
+    <audio loop id="battlenoise" autoplay="autoplay" src="assets/sounds/battle.mp3"></audio>
+    <audio loop id="back-noise" autoplay="autoplay" src=""></audio>
+
+    <div class="enemy-pokemon">
+      <div id="hangman-space"></div>
+      <div id="enemy-health">
+        <img src="assets/images/hpbar.png" id="hp-bar">
+        <p id="enemy-hp"></p>
+        <div id="enemy-bar">
         </div>
-        <img src="assets/images/hit.png" id="hit-me"/>
-        <div id="my-health">
-        	<h2>CHARIZARD</h2>
-          	<img src="assets/images/hpbar.png" id="my-hp-bar">
-          	<div id="my-bar"></div>
-          	<p id="my-hp-perc"></p>
+        <div class="pokemon-gif">
+          <img id="poke" src=""> <audio autoplay="autoplay" id="pokeCry" src=""></audio>
+          <img src="assets/images/pokegrassenemy.png" id="battlegrass" />
         </div>
-        <div id="hangman-space-main"></div>
-        <div id="text-space">
-           <p>
-            Letters guessed:
-           </p>
-          <div id="guesses"></div>
+        <img src="assets/images/hit.png" id="hit" />
+      </div>
+      <div class="my-pokemon">
+        <img id="mypoke" src="assets/images/charizardback.gif">
+        <img src="assets/images/mygrass.png" id="my-battlegrass" />
+      </div>
+      <img src="assets/images/hit.png" id="hit-me" />
+      <div id="my-health">
+        <h2>CHARIZARD</h2>
+        <img src="assets/images/hpbar.png" id="my-hp-bar">
+        <div id="my-bar"></div>
+        <p id="my-hp-perc"></p>
+      </div>
+      <div id="hangman-space-main"></div>
+      <div id="text-space">
+        <p>
+          Letters guessed:
+        </p>
+        <div id="guesses"></div>
+        <div id="buttons">
         </div>
-        <div id="messages"></div>
-      	
-      
-    </div> <!-- this closes main-container -->
+      </div>
+      <div id="messages"></div>
+
+
+    </div>
+    <!-- this closes main-container -->
     <footer></footer>
     <script src="assets/javascript/helper.js">
-    </script> 
+    </script>
     <script src="assets/javascript/game.js">
     </script>
-  </body>
+</body>
+
 </html>
