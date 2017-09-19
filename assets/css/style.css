@@ -30,6 +30,10 @@ body {
 	height: 100px;
 }
 
+#repo {
+	font-size: 14px;
+}
+
 #pokeball1 {
 	position: absolute;
 	width: 20px;
@@ -51,7 +55,7 @@ body {
 .jumbo {
 	position: relative;
 	background-color: rgba(204, 204, 204, 0.7);
-	padding: 0px 20px 20px 0px;
+	padding: 0px 20px 5px 0px;
 	width: 540px;
 	margin-left: 35px;
 	margin-bottom: 30px;
@@ -333,7 +337,7 @@ body {
 	.jumbo {
 		position: relative;
 		background-color: rgba(204, 204, 204, 0.7);
-		padding: 0px 12px 28px 5px;
+		padding: 0px 12px 2px 5px;
 		width: 340px;
 		margin-left: 28px;
 		margin-bottom: 30px;
@@ -482,5 +486,9 @@ body {
 
 	.letter {
 		font-size: 30px;
+	}
+
+	#repo {
+		font-size: 25px;
 	}
 }
