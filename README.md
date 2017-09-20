@@ -1,4 +1,4 @@
-# HW - Hangman Game
+# Pokemon Hangman
 
 ## Live Link
 
@@ -6,7 +6,7 @@
 
 ## Description on how to use the app
 
-Press any key to guess the hangman words. When you complete the hangman, you catch the pokemon. If you lose all your HP, the enemy runs away.
+Play as a trainer with your trusty pokemon and solve hangman riddles to catch more pokemon! Press any key to guess the hangman words. The mobile version will use buttons. When you complete the hangman, you catch the pokemon. If you lose all your HP, the enemy runs away.
 
 ## Requirements
 
