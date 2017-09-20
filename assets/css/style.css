@@ -31,6 +31,8 @@ body {
 }
 
 #repo {
+	position: relative;
+	z-index: 99;
 	font-size: 14px;
 }
 
@@ -396,15 +398,21 @@ body {
 
 	.my-pokemon {
 		margin-left: 23px;
+		margin-top: 5px;
 	}
 
 	#my-health {
 		margin-left: 250px;
+		margin-top: -54px;
+	}
+
+	#my-battlegrass {
+		margin-top: -125px;
 	}
 
 	#hangman-space-main {
 		position: relative;
-		margin-top: 80px;
+		margin-top: 40px;
 		margin-left: 85px;
 		padding: 5px 5px 0px 10px;
 		width: 333px;
